@@ -92,7 +92,7 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-<style>#rotate{display:none;position:fixed;inset:0;background:#1F2A44;color:#E6D9B8;font-family:Georgia,serif;z-index:99999;align-items:center;justify-content:center;text-align:center;font-size:7vw;padding:8vw}@media (orientation:portrait){#rotate{display:flex}}</style><div id=rotate>⟲<br>Turn your phone sideways<br><small style="font-size:4vw">Letters of Marque plays in landscape</small></div><script>document.addEventListener('touchend',function(){try{if(screen.orientation&&screen.orientation.lock){screen.orientation.lock('landscape').catch(function(){})}}catch(e){}},{passive:true});</script>
+<style>#rotate{display:none;position:fixed;inset:0;background:#1F2A44;color:#E6D9B8;font-family:Georgia,serif;z-index:99999;align-items:center;justify-content:center;text-align:center;font-size:7vw;padding:8vw}@media (orientation:portrait){#rotate{display:flex}}</style><div id=rotate>⟲<br>Turn your phone sideways<br><small style="font-size:4vw">Letters of Marque plays in landscape</small></div><script>document.addEventListener('touchend',function(){try{if(screen.orientation&&screen.orientation.lock){screen.orientation.lock('landscape').catch(function(){})}}catch(e){}},{passive:true});</script><script>(function(){var ctxs=[];var AC=window.AudioContext||window.webkitAudioContext;if(AC){var Orig=AC;var P=function(){var c=new Orig(arguments[0]);ctxs.push(c);return c};P.prototype=Orig.prototype;window.AudioContext=P;if(window.webkitAudioContext)window.webkitAudioContext=P}var sil=null;function unlock(){ctxs.forEach(function(c){if(c.state!=='running')c.resume().catch(function(){})});if(!sil){sil=document.createElement('audio');sil.setAttribute('playsinline','');sil.loop=true;sil.src='data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=';sil.volume=0.01;sil.play().catch(function(){})}}['touchstart','touchend','pointerdown','mousedown','keydown'].forEach(function(e){document.addEventListener(e,unlock,{passive:true})});document.addEventListener('visibilitychange',function(){if(!document.hidden)unlock()})})();</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -111,7 +111,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":23263204,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":23614316,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
