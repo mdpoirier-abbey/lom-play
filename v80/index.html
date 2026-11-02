@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head><script>window.__log=[];(function(){var O=window.AudioContext;var P=function(a){var c=new O(a);window.__ctx=c;window.__an=c.createAnalyser();window.__an.fftSize=2048;window.__an.connect(c.destination);c.addEventListener('statechange',function(){__log.push('state '+c.state)});return c};P.prototype=O.prototype;window.AudioContext=P;window.webkitAudioContext=P;
-var oc=AudioNode.prototype.connect;AudioNode.prototype.connect=function(d){if(d===(window.__ctx&&window.__ctx.destination)){oc.call(this,window.__an);__log.push('connect->dest '+this.constructor.name)}return oc.apply(this,arguments)};
-var os=AudioBufferSourceNode.prototype.start;AudioBufferSourceNode.prototype.start=function(){__log.push('start dur='+(this.buffer?this.buffer.duration.toFixed(2):'null')+' loop='+this.loop+' ls='+this.loopStart.toFixed(2)+' le='+this.loopEnd.toFixed(2));var n=this;this.addEventListener('ended',function(){__log.push('ended')});return os.apply(this,arguments)};
-window.__peak=function(){if(!window.__an)return -1;var d=new Float32Array(2048);__an.getFloatTimeDomainData(d);var m=0;for(var i=0;i<d.length;i++)m=Math.max(m,Math.abs(d[i]));return m};
-window.onerror=function(m){__log.push('ERR '+m)};})();</script>
+	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<title>Letters of Marque</title>
@@ -115,7 +111,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":30463720,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":30606428,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
